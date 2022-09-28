@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-arrangement">
+      <rect width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="arrangement" clip-path="url(#clip-arrangement)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-6 4)">
+      <g id="Group_12" data-name="Group 12" transform="translate(-1065.5 -611.971)">
+        <g id="Group_10" data-name="Group 10" transform="translate(1077.5 608.5)">
+          <line id="Line_3" data-name="Line 3" y2="22" transform="translate(6 0.471)" fill="none" stroke="#7baebe" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_4" data-name="Line 4" x2="6" y2="6" transform="translate(0 16.471)" fill="none" stroke="#7baebe" stroke-linecap="round" stroke-width="2"/>
+        </g>
+        <g id="Group_11" data-name="Group 11" transform="translate(1089.363 614.431)">
+          <line id="Line_3-2" data-name="Line 3" y1="23" transform="translate(0.137 -0.461)" fill="none" stroke="#7baebe" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_4-2" data-name="Line 4" x1="6" y1="6" transform="translate(0.137 -0.461)" fill="none" stroke="#7baebe" stroke-linecap="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

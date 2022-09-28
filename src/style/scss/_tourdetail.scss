@@ -1,0 +1,145 @@
+.pageNavbar {
+  margin: 158px 0 65px;
+}
+
+.tourist-detail {
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width:768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-title {
+    display: flex;
+    margin-bottom: 41px;
+
+    h1 {
+      font-size: 24px;
+      margin-right: 24px;
+    }
+  }
+  &-classGroup{
+    span {
+      @include background-color-radius15($yellow, $white, 14px);
+      padding: 5px 10px;
+      margin-right: 4px;
+    }
+  }
+
+  &-info {
+    width: 295px;
+    padding-left: 32px;
+    padding-bottom: 138px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background: $blue;
+    }
+
+    &::before {
+      @include normal-size(16px, 16px);
+      border-radius: 50%;
+      left: 0;
+    }
+
+    &::after {
+      @include normal-size(1px, 100%);
+      top: 0px;
+      left: 8px;
+    }
+
+    li {
+      margin-bottom: 42px;
+    }
+
+    img {
+      margin-right: 24px;
+    }
+
+    span {
+      letter-spacing: 1.12px;
+      line-height: 1.3;
+    }
+  }
+
+  &-image {
+    img{
+      @include size(671px, 473px, 671px, 473px, 345px, 244px);
+      border-radius: 15px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &-introduce {
+    padding-left: 32px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      @include normal-size(16px, 16px);
+      border-radius: 50%;
+      background: $blue;
+    }
+  }
+
+  &-text {
+    line-height: 1.3;
+    letter-spacing: 1.12px;
+    padding-left: 32px;
+    margin-bottom: 56px;
+  }
+
+  &-more-title {
+    color: $blue;
+    margin: 29px 0 45px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &-more-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include size(1200px, 320px, 668px, 320px, 308px, 305px);
+    margin: 0 auto 60px;
+    overflow: scroll;
+
+    li {
+      @include normal-size(215px, 285px);
+      border-radius: 15px;
+      flex-shrink: 0;
+      margin: 0 10.5px;
+    }
+
+    &-img {
+      img{
+        @include normal-size(215px, 197px);
+        border-radius: 15px 15px 0 0;
+      }
+    }
+
+    &-body {
+      padding: 12px 12px 19px;
+
+      h3 {
+        color: $blue;
+        font-size: 18px;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+
+}

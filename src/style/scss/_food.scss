@@ -1,0 +1,165 @@
+.food{
+  @include background-image('../assets/image/restaurant-header.jpeg');
+}
+.food,.room {
+  @include normal-size(100%, 100vh);
+  position: relative;
+
+  .navbar {
+    a {
+      color: $gray-600;
+    }
+
+    .menuBar {
+      color: $gray-600;
+    }
+  }
+
+  .scrollDown {
+    @include normal-size(29px, 48px);
+    @include background-image('https://raw.githubusercontent.com/wingfailam/taiwantravel/a129221346a00d1f241f0b9d2ea8077be1c0860c/src/assets/images/icons/slideDown_default.svg');
+    @include absoluteX-center(750px);
+
+    @media (max-width:768px) {
+      @include absoluteX-center(900px);
+    }
+
+    @media (max-width:375px) {
+      @include absoluteX-center(577px);
+    }
+  }
+}
+
+.food-logo {
+  @include size(567px, 419px, 567px, 419px, 298px, 213px);
+  @include background-image('../assets/image/taiwan-logo-black.svg');
+  @include absoluteX-center(160.63px);
+
+  @media (max-width:768px) {
+    @include absoluteX-center(300px);
+  }
+
+  @media (max-width:375px) {
+    @include absoluteX-center(209.63px);
+  }
+}
+
+.food-sm-logo {
+  @include normal-size(121px, 82.73px);
+  @include absoluteX-center(209px);
+
+  @media (max-width:375px) {
+    @include absoluteX-center(306px);
+  }
+}
+
+.food-search-text {
+  width: 768px;
+  margin: 90px auto 125px;
+  position: relative;
+
+  @media (max-width:768px) {
+    width: 700px;
+    margin: 40px auto;
+  }
+
+  @media (max-width:375px) {
+    width: 345px;
+  }
+
+  .food-text {
+    letter-spacing: 0.84px;
+    line-height: 1.3;
+  }
+}
+
+.food-search {
+  margin-top: 255px;
+  padding: 40px 0 43px;
+  border-top: 1px solid $gray-600;
+  border-bottom: 1px solid $gray-600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width:768px) {
+    margin-top: 203px;
+  }
+
+  .whereCityFood {
+    letter-spacing: 1.54px;
+    font-size: 22px;
+    color: $gray-600;
+    margin-right: 30px;
+
+    @media (max-width:375px) {
+      margin-right: 0;
+    }
+  }
+
+  label {
+    text-align: center;
+    position: relative;
+
+    select {
+      @include normal-size(354px, 50px);
+
+      @media (max-width:375px) {
+        margin-top: 16px;
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      right: 15px;
+      font-size: 50px;
+
+      @media (max-width:375px) {
+        top: 45px;
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.foodGroup {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 41px;
+
+  li {
+    width: 33.3333%;
+    position: relative;
+
+    @media (max-width:375px) {
+      width: 50%;
+    }
+
+    img {
+      @include normal-size(100%, 100%);
+    }
+
+    span {
+      z-index: -1;
+      @include absolute-center;
+      @include background-color(transparent, $white, 28px);
+      white-space: nowrap;
+      text-shadow: 0 0 15px $yellow;
+
+      @media (max-width:375px) {
+        font-size: 16px;
+        white-space: normal;
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 0.7;
+      }
+
+      span {
+        z-index: 1;
+      }
+    }
+  }
+}

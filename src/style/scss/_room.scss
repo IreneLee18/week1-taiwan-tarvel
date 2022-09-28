@@ -1,0 +1,137 @@
+.room {
+  @include background-image('../assets/image/hotel-header.jpeg');
+  margin-bottom: 125px;
+}
+
+.search-room {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 93px;
+
+  &-image {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 32px;
+      @include normal-size(474px, 564px);
+      border-radius: 0 25% 0 25%;
+      background: #D0E6F1;
+      z-index: -1;
+    }
+
+    img {
+      @include normal-size(474px, 564px);
+      border-radius: 0 25% 0 25%;
+    }
+
+  }
+
+  &-group {
+    width: 566px;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    margin-top: 62px;
+
+    span {
+      margin-left: 8px;
+      font-size: 22px;
+    }
+  }
+
+  &-input {
+    label {
+      position: relative;
+    }
+
+    select {
+      margin-top: 32px;
+      width: 45%;
+      margin-bottom: 32px;
+    }
+
+    .roomCity {
+      position: absolute;
+      top: 0px;
+      right: 20px;
+    }
+
+    input {
+      @include background-color-radius15($gray-200, $gray-600, 16px);
+      padding: 12px;
+      width: 45%;
+      cursor: inherit;
+    }
+
+    .date,
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+
+      label {
+        width: 100%;
+
+        input {
+          width: 83%;
+        }
+      }
+    }
+
+    #keyword {
+      width: 92%;
+    }
+
+    button {
+      margin-left: 0;
+      margin-top: 32px;
+    }
+  }
+}
+
+.popular-title {
+  @include normal-size(768px, 114px);
+  padding: 40px 0 41px;
+  margin: 0 auto 72px;
+  text-align: center;
+  border-top: 1px solid $gray-300;
+  border-bottom: 1px solid $gray-300;
+
+  p {
+    font-size: 24px;
+  }
+}
+.popular-card{
+  li{
+    width: 20%;
+    border-radius: 15px;
+  }
+  &-img{
+    img{
+      @include normal-size(100%,314px);
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+    }
+  }
+  &-body{
+    padding: 24px 12px 26px;
+    h3{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      img{
+        @include normal-size(19px,19px);
+        margin-right: 8px;
+      }
+    }
+  }
+}

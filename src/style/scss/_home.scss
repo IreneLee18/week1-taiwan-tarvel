@@ -1,0 +1,44 @@
+.home {
+  @include normal-size(100%, 100vh);
+  @include background-image('../assets/image/header.jpeg');
+  position: relative;
+
+  .logo {
+    @include size(567px, 419px, 567px, 419px, 298px, 213px);
+    @include background-image('../assets/image/taiwan-logo-white.svg');
+    @include absoluteX-center(110px);
+  }
+}
+
+
+.area-search-group {
+  @include flex-center;
+  flex-wrap: wrap;
+  @include size(768px, 110px, 302px, 206px, 302px, 206px);
+  @include absoluteX-center(609px);
+  @include background-color-radius15($white, $gray-700, 16px);
+  box-shadow: 0px 4px 8px #0000004B;
+
+  @media (max-width:768px) {
+    @include absoluteX-center(660px);
+  }
+
+  @media (max-width:375px) {
+    @include absoluteX-center(410px);
+  }
+
+}
+
+.search-btn {
+  @include background-color-radius15($yellow, $white, 18px);
+  padding: 14px 34.5px;
+  margin-left: 14px;
+
+  &:hover {
+    @include background-color-radius15(darken($yellow, 10%), $white, 18px)
+  }
+
+  @media (max-width:768px) {
+    margin: 0;
+  }
+}

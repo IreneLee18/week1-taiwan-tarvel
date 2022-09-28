@@ -1,0 +1,65 @@
+$white:#FFFFFF;
+$yellow:#E8CB89;
+$blue:#7BAEBE;
+$light-blue:#A6CDE0;
+$gray:#D1D1D1; // input 字
+$gray-100:#E6E6E6;
+$gray-200:#EBEBEB; // input 框框
+$gray-300:#BFBFBF; // input 框框
+$gray-400:#626262; // input 箭頭
+$gray-500:#646464; // input 箭頭
+$gray-600:#666666;
+$gray-700:#707070; // input 字
+
+@mixin size ($lw,$lh,$mw,$mh,$sw,$sh) {
+  width: $lw;
+  height: $lh;
+  @media (max-width:768px) {
+    width: $mw;
+    height: $mh;
+  }
+  @media (max-width:375px) {
+    width: $sw;
+    height: $sh;
+  }
+}
+@mixin normal-size($w,$h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin background-image ($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin background-color-radius15($bc,$tc,$fz) {
+  background-color: $bc;
+  color: $tc;
+  font-size: $fz;
+  border-radius: 15px;
+}
+@mixin background-color($bc,$tc,$fz) {
+  background-color: $bc;
+  color: $tc;
+  font-size: $fz;
+}
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+@mixin absoluteX-center($t) {
+  position: absolute;
+  left: 50%;
+  top: $t;
+  transform: translateX(-50%);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,228 @@
+header {
+  background: $light-blue;
+}
+.tour-header {
+  @include normal-size(100%, 140px);
+  @include background-image('../assets/image/scenicspot-header.jpeg');
+  margin-bottom: 18px;
+}
+
+.main {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  // overflow: hidden;
+
+  @media (max-width:768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.side-tour-search {
+  .input-search {
+    position: relative;
+
+    input {
+      @include normal-size(277px, 56px);
+      @include background-color-radius15($white, $gray-300, 16px);
+      padding-left: 17px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      @include background-color(transparent, $blue, 20px);
+      position: absolute;
+      top: 17px;
+      left: 256px;
+    }
+  }
+
+  .text-blue {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .card {
+    @include size(294px, 545px, 700px, 279px, 345px, 306px);
+    padding: 20px 17px;
+    border-radius: 15px;
+    margin-bottom: 32px;
+
+    .search-title {
+      @media (max-width:768px) {
+        display: none;
+      }
+    }
+
+    .category-title {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #CCD7DB;
+    }
+
+    .category {
+      display: flex;
+      flex-wrap: wrap;
+
+      label {
+        width: 100%;
+
+        @media (max-width:768px) {
+          width: 20%;
+        }
+
+        @media (max-width:375px) {
+          width: 33.3333%;
+        }
+      }
+
+      input {
+        opacity: 0;
+        width: 1px;
+        height: 22px;
+      }
+
+      div {
+        @include normal-size(16px, 16px);
+        border-radius: 50%;
+        background: $gray;
+      }
+
+      .checked {
+        position: relative;
+
+        &:after {
+          content: '';
+          @include normal-size(10px, 10px);
+          border-radius: 50%;
+          background: $blue;
+          @include absolute-center;
+        }
+      }
+    }
+
+    .tour-search-btn {
+      display: flex;
+      justify-content: center;
+
+      button {
+        margin: 19px 0 0;
+      }
+    }
+  }
+}
+
+.main-tour-list {
+  @media (max-width:768px) {
+    @include normal-size(100%, 100%);
+  }
+
+  .search-result-title {
+    color: $blue;
+    font-size: 24px;
+    margin-bottom: 41px;
+  }
+
+  .card {
+    @include background-color-radius15($white, $gray-700, 16px);
+    @include size(826px, 240px, 700px, 240px, 345px, 185px);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    position: relative;
+
+    &-image {
+      img {
+        @include normal-size(342px, 240px);
+        border-radius: 15px 0 0 15px;
+
+        @media (max-width:375px) {
+          @include normal-size(173px, 185px);
+        }
+      }
+    }
+
+    &-body {
+      width: 484px;
+      padding: 18px;
+    }
+
+    &-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+
+      .name {
+        color: $blue;
+        font-size: 22px;
+        margin-bottom: 8px;
+
+        @media (max-width:375px) {
+          font-size: 16px;
+          width: 100%;
+        }
+      }
+
+      .classGroup {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+
+        p {
+          @include background-color-radius15($yellow, $white, 14px);
+          padding: 5px 10px;
+          margin-right: 8px;
+          margin-bottom: 4px;
+
+          &:last-child {
+            margin: 0 0 4px;
+          }
+        }
+
+      }
+    }
+
+    &-text {
+      line-height: 1.5;
+      height: 94px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      /*省略第n行後的文字*/
+      -webkit-box-orient: vertical;
+
+      /*設定元素是垂直布局*/
+
+      @media (max-width:375px) {
+        display: none;
+      }
+    }
+
+    &-info {
+      display: flex;
+      position: absolute;
+      bottom: 19px;
+
+      img {
+        @include normal-size(20px, 20px);
+        margin-right: 8px;
+      }
+
+      span {
+        margin-right: 24px;
+        white-space: nowrap;
+        width: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .touch {
+        position: absolute;
+        right: 18px;
+      }
+    }
+  }
+}

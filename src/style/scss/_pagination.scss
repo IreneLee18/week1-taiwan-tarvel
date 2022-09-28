@@ -1,0 +1,35 @@
+.paginationNum,.pagination {
+  display: flex;
+  justify-content: end;
+
+  li {
+    @include normal-size(50px, 50px);
+    @include background-color-radius15($white, $blue, 18px);
+    border: 1px solid $blue;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    margin: 0 6px 70px;
+
+    &:hover {
+      color: $white;
+      background: $blue;
+    }
+  }
+
+  .pagination-active {
+    color: $white;
+    background: $blue;
+  }
+
+  .disabled {
+    background: $gray-100;
+    color: #BCBCBC;
+    border-color: $gray-100;
+  }
+}
+.pagination{
+  li{
+    border-radius: 50%;
+  }
+}
