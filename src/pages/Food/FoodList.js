@@ -3,6 +3,7 @@ import Loading from "../components/Loading";
 import { allCity } from "../Data/HomeData";
 import { Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
+import getAuthorizationHeader from "../../Utils/APITOKEN";
 function FoodList() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentCity, setCurrentCity] = useState("NewTaipei");
@@ -12,10 +13,7 @@ function FoodList() {
   const getData=useCallback((api)=>{
     fetch(api, {
       method: "GET",
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
-        "Content-Type": "application/json",
-      },
+      headers: getAuthorizationHeader()
     })
       .then((res) => res.json())
       .then((res) => {

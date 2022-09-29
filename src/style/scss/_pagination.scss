@@ -1,4 +1,5 @@
-.paginationNum,.pagination {
+.paginationNum,
+.pagination {
   display: flex;
   justify-content: end;
 
@@ -26,10 +27,17 @@
     background: $gray-100;
     color: #BCBCBC;
     border-color: $gray-100;
+    cursor: no-drop;
+
+    &:hover {
+      background: $gray-100;
+      color: #BCBCBC;
+    }
   }
 }
-.pagination{
-  li{
+
+.pagination {
+  li {
     border-radius: 50%;
   }
 }

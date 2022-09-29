@@ -1226,6 +1226,16 @@ header {
   font-size: 24px;
 }
 
+.popular-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
 .popular-card li {
   width: 20%;
   border-radius: 15px;
@@ -1233,7 +1243,7 @@ header {
 
 .popular-card-img img {
   width: 100%;
-  height: 314px;
+  height: 180px;
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1457,7 +1467,8 @@ header {
   margin-bottom: 35px;
 }
 
-.paginationNum, .pagination {
+.paginationNum,
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1466,7 +1477,8 @@ header {
           justify-content: end;
 }
 
-.paginationNum li, .pagination li {
+.paginationNum li,
+.pagination li {
   width: 50px;
   height: 50px;
   background-color: #FFFFFF;
@@ -1480,20 +1492,30 @@ header {
   margin: 0 6px 70px;
 }
 
-.paginationNum li:hover, .pagination li:hover {
+.paginationNum li:hover,
+.pagination li:hover {
   color: #FFFFFF;
   background: #7BAEBE;
 }
 
-.paginationNum .pagination-active, .pagination .pagination-active {
+.paginationNum .pagination-active,
+.pagination .pagination-active {
   color: #FFFFFF;
   background: #7BAEBE;
 }
 
-.paginationNum .disabled, .pagination .disabled {
+.paginationNum .disabled,
+.pagination .disabled {
   background: #E6E6E6;
   color: #BCBCBC;
   border-color: #E6E6E6;
+  cursor: no-drop;
+}
+
+.paginationNum .disabled:hover,
+.pagination .disabled:hover {
+  background: #E6E6E6;
+  color: #BCBCBC;
 }
 
 .pagination li {

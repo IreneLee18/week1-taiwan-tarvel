@@ -3,6 +3,7 @@ import Loading from "../components/Loading";
 import { allCity } from "../Data/HomeData";
 import { Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
+import getAuthorizationHeader from "../../Utils/APITOKEN";
 function RoomList() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentCity, setCurrentCity] = useState("NewTaipei");
@@ -11,19 +12,16 @@ function RoomList() {
   const perPage = 4;
   const getData = useCallback(
     (api) => {
-      fetch('api', {
+      fetch(api, {
         method: "GET",
-        headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
-          "Content-Type": "application/json",
-        },
+        headers: getAuthorizationHeader(),
       })
         .then((res) => res.json())
         .then((res) => {
-          console.log(res)
           setAllData(res);
-          // setIsLoading(false);
-        });
+          setIsLoading(false);
+        })
+        .catch((err) => console.log(err));
       window.localStorage.setItem("currentCityRoom", currentCity);
     },
     [currentCity]
@@ -134,7 +132,7 @@ function RoomList() {
               <div className="container">
                 <ul className="popular-card">
                   {pageData.map((item) => (
-                    <li className="box-shadow">
+                    <li key={item.HotelID} className="box-shadow">
                       <Link to={item.HotelID}>
                         <div className="popular-card-img">
                           <img

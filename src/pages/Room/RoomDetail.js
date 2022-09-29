@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import Web from "../../Utils/Web";
+import getAuthorizationHeader from "../../Utils/APITOKEN";
 
 function RoomDetail() {
   const currentCity = window.localStorage.getItem("currentCityFood");
@@ -14,10 +15,7 @@ function RoomDetail() {
     setIsLoading(true);
     return fetch(api, {
       method: "GET",
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
-        "Content-Type": "application/json",
-      },
+      headers: getAuthorizationHeader()
     }).then((res) => res.json());
   };
   useEffect(() => {

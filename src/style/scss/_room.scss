@@ -107,13 +107,16 @@
   }
 }
 .popular-card{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
   li{
     width: 20%;
     border-radius: 15px;
   }
   &-img{
     img{
-      @include normal-size(100%,314px);
+      @include normal-size(100%,180px);
       border-radius: 15px 15px 0 0;
       object-fit: cover;
     }

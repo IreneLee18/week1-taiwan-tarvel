@@ -3,6 +3,7 @@ import PaginationNum from "../components/PaginationNum";
 import { Link } from "react-router-dom";
 import { categoryData } from "../Data/TourData";
 import { useCallback, useEffect, useState } from "react";
+import getAuthorizationHeader from "../../Utils/APITOKEN";
 function TouristSpots() {
   const homeStartSearch = window.localStorage.getItem("currentCity");
   const [category, setCategory] = useState(categoryData);
@@ -22,10 +23,7 @@ function TouristSpots() {
     const api = `https://tdx.transportdata.tw/api/basic/v2/Tourism/ScenicSpot/${currentCity}?%24top=30&%24format=JSON`;
     fetch(api, {
       method: "GET",
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
-        "Content-Type": "application/json",
-      },
+      headers: getAuthorizationHeader()
     })
       .then((res) => res.json())
       .then((res) => setAllData(res));
